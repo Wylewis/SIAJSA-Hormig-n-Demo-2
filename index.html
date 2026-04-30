@@ -1,756 +1,854 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SIAJSA | Hormigón Premezclado · Cochabamba y Santa Cruz</title>
-<meta name="description" content="SIAJSA LTDA produce hormigón premezclado H-15 a H-35 con áridos propios de Parotani. Dosificación computarizada, servicio de bombeo y soporte técnico en Cochabamba y Santa Cruz."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --c-bg: #0a0f0a;
-  --c-surface: #0f150f;
-  --c-surface2: #151e15;
-  --c-surface3: #1c271c;
-  --c-border: rgba(255,255,255,0.06);
-  --c-border2: rgba(255,255,255,0.12);
-  --c-text: #edf2ed;
-  --c-text2: #8a9e8a;
-  --c-text3: #4a5e4a;
-  --c-green: #1e8c3a;
-  --c-green-light: #27a847;
-  --c-green-bright: #2ecc52;
-  --c-green-dim: rgba(30,140,58,0.12);
-  --c-green-dim2: rgba(30,140,58,0.24);
-  --c-gold: #a8c87a;
-  --radius: 4px;
-  --radius-lg: 8px;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIAJSA LTDA | Hormigon premezclado certificado</title>
+    <meta
+      name="description"
+      content="SIAJSA LTDA produce hormigon premezclado H-15 a H-35 con aridos propios en Parotani, dosificacion computarizada, laboratorio con respaldo UMSS y servicio de bombeo en Cochabamba y Santa Cruz." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Barlow:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --slate: #1a1a2e;
+        --concrete: #4a4a4a;
+        --accent: #e85d04;
+        --accent-alt: #fca311;
+        --text: #f5f5f5;
+        --muted: #b8b8b8;
+        --border: rgba(255, 255, 255, 0.08);
+        --card: rgba(26, 26, 46, 0.72);
+        --shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+        --radius-lg: 22px;
+        --radius-md: 16px;
+        --radius-sm: 12px;
+        --transition: 0.25s ease;
+      }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--c-bg);color:var(--c-text);line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-select{appearance:none;-webkit-appearance:none}
-.container{width:min(1140px,92vw);margin:0 auto}
+      * {
+        box-sizing: border-box;
+      }
 
-/* NAV */
-.nav-wrap{position:sticky;top:0;z-index:100;background:rgba(10,15,10,0.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--c-border)}
-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
-.nav-logo img{height:38px;width:auto;display:block}
-.nav-links{display:flex;gap:2px}
-.nav-links a{padding:8px 14px;font-size:13px;color:var(--c-text2);border-radius:var(--radius);transition:color .2s,background .2s}
-.nav-links a:hover{color:var(--c-text);background:var(--c-surface2)}
-.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--c-green);color:#fff;font-weight:700;font-size:13px;border-radius:var(--radius);transition:background .2s,transform .15s;white-space:nowrap}
-.nav-cta:hover{background:var(--c-green-light);transform:translateY(-1px)}
+      html {
+        scroll-behavior: smooth;
+      }
 
-/* HERO */
-.hero{position:relative;padding:110px 0 90px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(30,140,58,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(30,140,58,.06) 1px,transparent 1px);background-size:60px 60px}
-.hero-bg-glow{position:absolute;top:-220px;right:-180px;width:720px;height:720px;background:radial-gradient(circle,rgba(30,140,58,.14) 0%,transparent 65%)}
-.hero-bg-glow2{position:absolute;bottom:-260px;left:-120px;width:480px;height:480px;background:radial-gradient(circle,rgba(30,140,58,.07) 0%,transparent 70%)}
-.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--c-green-dim);border:1px solid var(--c-green-dim2);border-radius:2px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--c-green-bright);margin-bottom:22px}
-.hero-badge::before{content:'';width:6px;height:6px;background:var(--c-green-bright);border-radius:50%;animation:pulse 2s ease-in-out infinite;flex-shrink:0}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,5.5vw,5.2rem);line-height:.93;letter-spacing:2px;color:var(--c-text)}
-.hero h1 .accent{color:var(--c-green-bright)}
-.hero-sub{font-size:1rem;color:var(--c-text2);line-height:1.75;margin:18px 0 34px;max-width:460px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.btn-primary{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;background:var(--c-green);color:#fff;font-weight:700;font-size:14px;border-radius:var(--radius);transition:background .2s,transform .15s,box-shadow .2s}
-.btn-primary:hover{background:var(--c-green-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(30,140,58,.35)}
-.btn-ghost{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border:1px solid var(--c-border2);color:var(--c-text2);font-size:14px;border-radius:var(--radius);transition:border-color .2s,color .2s}
-.btn-ghost:hover{border-color:var(--c-green-light);color:var(--c-green-bright)}
-.hero-card{background:var(--c-surface);border:1px solid var(--c-border2);border-radius:var(--radius-lg);padding:30px;position:relative;overflow:hidden}
-.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--c-green),transparent)}
-.hero-card-title{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--c-text3);margin-bottom:22px}
-.hero-metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--c-border)}
-.hero-metric{background:var(--c-surface);padding:18px 14px}
-.hero-metric .val{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--c-text);line-height:1;letter-spacing:1px}
-.hero-metric .val.g{color:var(--c-green-bright)}
-.hero-metric .lbl{font-size:11px;color:var(--c-text2);margin-top:4px;line-height:1.4}
-.hero-card-note{margin-top:18px;padding-top:18px;border-top:1px solid var(--c-border);display:flex;align-items:center;gap:10px;font-size:12px;color:var(--c-text2)}
-.hero-card-note svg{flex-shrink:0;color:var(--c-green-bright)}
+      body {
+        margin: 0;
+        font-family: "Barlow", system-ui, -apple-system, sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at top, rgba(232, 93, 4, 0.15), transparent 55%),
+          var(--slate);
+        line-height: 1.6;
+      }
 
-/* SECTIONS */
-.section{padding:96px 0}
-.section-tag{display:inline-block;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--c-green-bright);margin-bottom:12px}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.3rem,4vw,3.5rem);letter-spacing:2px;color:var(--c-text);line-height:1;margin-bottom:14px}
-.section-sub{font-size:.97rem;color:var(--c-text2);line-height:1.75;max-width:540px}
+      img {
+        max-width: 100%;
+        display: block;
+      }
 
-/* STRIP */
-.strip{background:var(--c-surface);border-top:1px solid var(--c-border);border-bottom:1px solid var(--c-border);padding:18px 0;overflow:hidden}
-.strip-track{display:flex;white-space:nowrap;will-change:transform}
-.strip-inner{display:inline-flex;gap:48px;align-items:center;padding-right:48px}
-.strip-item{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--c-text3)}
-.strip-dot{width:4px;height:4px;background:var(--c-green);border-radius:50%;flex-shrink:0}
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-/* CATÁLOGO */
-.catalog-section{background:var(--c-surface)}
-.catalog-header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
-.hormigon-grid{display:grid;gap:1px;background:var(--c-border);border:1px solid var(--c-border)}
-.hormigon-row{display:grid;grid-template-columns:100px 145px 1fr 165px;background:var(--c-surface);align-items:center;transition:background .18s}
-.hormigon-row:hover{background:var(--c-surface2)}
-.hormigon-row.header-row{background:var(--c-surface2);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--c-text3)}
-.hc{padding:17px 20px;border-right:1px solid var(--c-border)}
-.hc:last-child{border-right:none}
-.h-code{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:2px;color:var(--c-text)}
-.h-res{font-family:'DM Mono',monospace;font-size:.95rem;color:var(--c-green-bright);font-weight:500}
-.h-app{font-size:13px;color:var(--c-text2);line-height:1.55}
-.h-tag{display:inline-block;padding:5px 11px;background:var(--c-green-dim);border:1px solid var(--c-green-dim2);border-radius:2px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--c-green-bright)}
-.h-tag.special{background:rgba(168,200,122,.1);border-color:rgba(168,200,122,.28);color:var(--c-gold)}
+      .container {
+        width: min(1160px, 92vw);
+        margin: 0 auto;
+      }
 
-/* CALCULADORA */
-.calc-section{background:var(--c-bg)}
-.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--c-border);border:1px solid var(--c-border);border-radius:var(--radius-lg);overflow:hidden}
-.calc-form{background:var(--c-surface);padding:44px}
-.calc-result{background:var(--c-surface2);padding:44px;display:flex;flex-direction:column;justify-content:center}
-.calc-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--c-text3);display:block;margin-bottom:9px}
-.calc-input-wrap{display:flex;align-items:center;border:1px solid var(--c-border2);border-radius:var(--radius);overflow:hidden;margin-bottom:18px;transition:border-color .2s}
-.calc-input-wrap:focus-within{border-color:var(--c-green)}
-.calc-input{flex:1;background:transparent;border:none;outline:none;padding:13px 16px;font-family:'DM Mono',monospace;font-size:.97rem;color:var(--c-text);-moz-appearance:textfield;cursor:pointer}
-.calc-input::-webkit-inner-spin-button,.calc-input::-webkit-outer-spin-button{-webkit-appearance:none}
-.calc-unit{padding:13px 15px;background:var(--c-surface3);font-family:'DM Mono',monospace;font-size:12px;color:var(--c-text3);border-left:1px solid var(--c-border);white-space:nowrap}
-.calc-divider{display:flex;align-items:center;gap:12px;margin:6px 0 22px;color:var(--c-text3);font-size:11px;letter-spacing:2px;text-transform:uppercase}
-.calc-divider::before,.calc-divider::after{content:'';flex:1;height:1px;background:var(--c-border)}
-.result-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--c-text3);margin-bottom:8px}
-.result-number{font-family:'Bebas Neue',sans-serif;font-size:5rem;line-height:1;color:var(--c-green-bright);letter-spacing:2px}
-.result-unit{font-family:'DM Mono',monospace;font-size:1.05rem;color:var(--c-text2);margin-top:4px;margin-bottom:28px}
-.result-note{font-size:12px;color:var(--c-text3);line-height:1.65;margin-bottom:28px;padding:14px;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius)}
-.wa-btn{display:inline-flex;align-items:center;gap:11px;padding:14px 22px;background:#25d366;color:#fff;font-weight:700;font-size:14px;border-radius:var(--radius);transition:background .2s,transform .15s;width:100%;justify-content:center}
-.wa-btn:hover{background:#1dbb58;transform:translateY(-1px)}
+      .skip-link {
+        position: absolute;
+        top: 16px;
+        left: -999px;
+        background: #ffffff;
+        color: #111;
+        padding: 10px 16px;
+        border-radius: 999px;
+        z-index: 1000;
+      }
 
-/* PAROTANI */
-.parotani-section{background:var(--c-surface);border-top:1px solid var(--c-border);border-bottom:1px solid var(--c-border)}
-.parotani-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.parotani-ensayos{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--c-border);margin-top:28px}
-.ensayo-item{background:var(--c-surface2);padding:18px}
-.ensayo-val{font-family:'DM Mono',monospace;font-size:1.25rem;color:var(--c-green-bright);font-weight:500}
-.ensayo-lbl{font-size:12px;color:var(--c-text2);margin-top:4px;line-height:1.4}
-.proceso-list{margin-top:32px;display:flex;flex-direction:column}
-.proceso-item{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--c-border)}
-.proceso-item:last-child{border-bottom:none}
-.proceso-num{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--c-green-dim2);letter-spacing:1px;flex-shrink:0;width:32px;line-height:1}
-.proceso-text h4{font-size:14px;font-weight:700;color:var(--c-text);margin-bottom:3px}
-.proceso-text p{font-size:13px;color:var(--c-text2);line-height:1.6}
+      .skip-link:focus {
+        left: 16px;
+      }
 
-/* SERVICIOS */
-.servicios-section{background:var(--c-bg)}
-.servicios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--c-border);border:1px solid var(--c-border);margin-top:52px}
-.servicio-card{background:var(--c-surface);padding:34px 26px;transition:background .18s;position:relative;overflow:hidden}
-.servicio-card:hover{background:var(--c-surface2)}
-.servicio-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--c-green);transition:width .3s}
-.servicio-card:hover::after{width:100%}
-.servicio-icon{width:38px;height:38px;background:var(--c-green-dim);border:1px solid var(--c-green-dim2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--c-green-bright)}
-.servicio-card h3{font-size:15px;font-weight:700;color:var(--c-text);margin-bottom:9px}
-.servicio-card p{font-size:13px;color:var(--c-text2);line-height:1.7}
+      .top-bar {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(15, 15, 26, 0.88);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+      }
 
-/* VENTAJAS */
-.ventajas-section{background:var(--c-surface);border-top:1px solid var(--c-border)}
-.ventajas-table-wrap{margin-top:52px;border:1px solid var(--c-border);border-radius:var(--radius-lg);overflow:hidden}
-.vtable{width:100%;border-collapse:collapse}
-.vtable th{padding:13px 20px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--c-text3);background:var(--c-surface2);text-align:left;border-bottom:1px solid var(--c-border)}
-.vtable th:not(:first-child){text-align:center}
-.vtable td{padding:15px 20px;font-size:13px;border-bottom:1px solid var(--c-border);color:var(--c-text2)}
-.vtable tr:last-child td{border-bottom:none}
-.vtable td:first-child{color:var(--c-text);font-weight:500}
-.vtable td:not(:first-child){text-align:center}
-.check{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:rgba(46,204,82,.1);border:1px solid rgba(46,204,82,.25);border-radius:2px;color:var(--c-green-bright);font-size:12px}
-.cross{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:rgba(255,80,80,.08);border:1px solid rgba(255,80,80,.15);border-radius:2px;color:#ff5858;font-size:12px}
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 18px 0;
+      }
 
-/* SEDES */
-.sedes-section{background:var(--c-bg);padding:96px 0}
-.sedes-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--c-border);border:1px solid var(--c-border);border-radius:var(--radius-lg);overflow:hidden;margin-top:52px}
-.sede-card{background:var(--c-surface);padding:38px;position:relative;overflow:hidden}
-.sede-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--c-green),transparent)}
-.sede-city{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;letter-spacing:3px;color:var(--c-text);margin-bottom:4px}
-.sede-address{font-size:13px;color:var(--c-text2);margin-bottom:26px;padding-bottom:26px;border-bottom:1px solid var(--c-border);line-height:1.6}
-.sede-contacts{display:flex;flex-direction:column;gap:11px}
-.sede-contact-item{display:flex;align-items:center;gap:12px}
-.sede-contact-item svg{color:var(--c-green-bright);flex-shrink:0}
-.sede-contact-item span{font-family:'DM Mono',monospace;font-size:13px;color:var(--c-text)}
-.sede-wa{display:inline-flex;align-items:center;gap:8px;margin-top:26px;padding:11px 20px;background:#25d366;color:#fff;font-weight:700;font-size:13px;border-radius:var(--radius);transition:background .2s}
-.sede-wa:hover{background:#1dbb58}
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
 
-/* CTA BAND */
-.cta-band{background:var(--c-green);padding:76px 0;position:relative;overflow:hidden}
-.cta-band::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;background:rgba(255,255,255,.06);border-radius:50%}
-.cta-band::after{content:'';position:absolute;bottom:-80px;left:-60px;width:280px;height:280px;background:rgba(0,0,0,.1);border-radius:50%}
-.cta-band-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
-.cta-band h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,4vw,3.6rem);letter-spacing:2px;color:#fff;line-height:1}
-.cta-band p{color:rgba(255,255,255,.72);margin-top:10px;font-size:.97rem}
-.cta-band-actions{display:flex;flex-direction:column;gap:11px;min-width:234px}
-.btn-white{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 26px;background:#fff;color:var(--c-green);font-weight:700;font-size:14px;border-radius:var(--radius);transition:background .15s,transform .15s}
-.btn-white:hover{background:#f0fdf4;transform:translateY(-1px)}
-.btn-outline-white{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 26px;border:2px solid rgba(255,255,255,.38);color:#fff;font-weight:700;font-size:14px;border-radius:var(--radius);transition:border-color .15s}
-.btn-outline-white:hover{border-color:#fff}
+      .brand img {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        object-fit: cover;
+      }
 
-/* FOOTER */
-footer{background:var(--c-surface);border-top:1px solid var(--c-border);padding:36px 0}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.footer-legal{font-size:12px;color:var(--c-text3)}
-.footer-norm{font-size:11px;color:var(--c-text3);letter-spacing:.5px}
+      .brand-title {
+        font-family: "Rajdhani", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
 
-/* WHATSAPP FLOAT */
-.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s,box-shadow .2s}
-.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.52)}
+      .brand-subtitle {
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:none}
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
-  .hero-card{display:none}
-  .parotani-inner,.calc-wrap,.sedes-grid,.cta-band-inner{grid-template-columns:1fr}
-  .servicios-grid{grid-template-columns:1fr 1fr}
-  .hormigon-row{grid-template-columns:80px 120px 1fr}
-  .nav-links{display:none}
-}
-@media(max-width:600px){
-  .servicios-grid{grid-template-columns:1fr}
-  .hero{padding:72px 0 52px}
-  .section{padding:64px 0}
-  .hormigon-row{grid-template-columns:68px 1fr}
-  .hc.hide-mobile{display:none}
-  .calc-form,.calc-result{padding:26px}
-}
-</style>
-</head>
-<body>
+      .nav-links a {
+        padding: 8px 12px;
+        border-radius: 999px;
+        transition: var(--transition);
+      }
 
-<!-- NAV -->
-<div class="nav-wrap">
-  <div class="container">
-    <nav>
-      <div class="nav-logo">
-        <!-- Logo cargado desde el mismo repositorio GitHub -->
-        <img src="Logo.jpg" alt="SIAJSA Hormigón" style="height:38px;width:auto"/>
-      </div>
-      <div class="nav-links">
-        <a href="#productos">Productos</a>
-        <a href="#calculadora">Calculadora</a>
-        <a href="#calidad">Calidad</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#sedes">Sedes</a>
-      </div>
-      <a class="nav-cta" href="https://wa.me/59172423158" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0 0 12.01 0C5.4 0 .02 5.39 0 11.98A11.9 11.9 0 0 0 1.76 18l-1.16 6 6.12-1.6A11.95 11.95 0 0 0 12 24h.01c6.61 0 11.99-5.39 11.99-11.99 0-3.2-1.25-6.2-3.48-8.53Z"/></svg>
-        Cotizar ahora
-      </a>
-    </nav>
-  </div>
-</div>
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+      }
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-bg-glow"></div>
-    <div class="hero-bg-glow2"></div>
-  </div>
-  <div class="container">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-badge">Operación 24/7 · Bolivia</div>
-        <h1>HORMIGÓN<br/><span class="accent">PREMEZCLADO</span><br/>DE PRECISIÓN</h1>
-        <p class="hero-sub">Dosificación computarizada, áridos propios de Parotani y respaldo técnico de la UMSS. H-15 a H-35 para cualquier proyecto estructural en Cochabamba y Santa Cruz.</p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="#calculadora">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 10h8M8 14h4"/></svg>
-            Calcular mi volumen
-          </a>
-          <a class="btn-ghost" href="#productos">Ver catálogo H-15 a H-35</a>
-        </div>
-      </div>
-      <div class="hero-card reveal">
-        <div class="hero-card-title">Indicadores de planta · Datos técnicos</div>
-        <div class="hero-metrics">
-          <div class="hero-metric">
-            <div class="val g">H-35</div>
-            <div class="lbl">Máxima resistencia<br/>disponible</div>
+      .cta-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        box-shadow: 0 18px 35px rgba(232, 93, 4, 0.25);
+        transition: var(--transition);
+      }
+
+      .cta-primary:hover,
+      .cta-primary:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 45px rgba(232, 93, 4, 0.35);
+      }
+
+      .cta-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        transition: var(--transition);
+      }
+
+      .cta-secondary:hover,
+      .cta-secondary:focus-visible {
+        border-color: var(--accent-alt);
+        color: var(--accent-alt);
+      }
+
+      .hero {
+        padding: 90px 0 70px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 36px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-family: "Rajdhani", sans-serif;
+        font-size: clamp(2.8rem, 4vw, 4.4rem);
+        line-height: 1.05;
+        margin: 0 0 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 1rem;
+        margin-bottom: 26px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .hero-panel {
+        background: var(--card);
+        border-radius: var(--radius-lg);
+        padding: 26px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel h3 {
+        font-family: "Rajdhani", sans-serif;
+        margin: 0 0 12px;
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero-grid .stat {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+        font-size: 0.95rem;
+      }
+
+      .hero-grid .stat:last-child {
+        border-bottom: none;
+      }
+
+      .stat span {
+        font-weight: 700;
+        color: var(--accent-alt);
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .section-title {
+        font-family: "Rajdhani", sans-serif;
+        font-size: clamp(2rem, 3.2vw, 3rem);
+        margin: 0 0 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .section-subtitle {
+        color: var(--muted);
+        margin: 0 0 32px;
+        max-width: 760px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(232, 93, 4, 0.18);
+        color: var(--accent-alt);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 14px 16px;
+      }
+
+      thead {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      tbody tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        transition: var(--transition);
+      }
+
+      tbody tr:hover {
+        background: rgba(232, 93, 4, 0.12);
+      }
+
+      .table-scroll {
+        overflow-x: auto;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+      }
+
+      .calculator {
+        display: grid;
+        gap: 16px;
+      }
+
+      .input-group {
+        display: grid;
+        gap: 8px;
+      }
+
+      label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      input {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid transparent;
+        padding: 12px 14px;
+        border-radius: var(--radius-sm);
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+        transition: var(--transition);
+      }
+
+      input:focus {
+        border-color: var(--accent-alt);
+        box-shadow: 0 0 0 3px rgba(252, 163, 17, 0.15);
+      }
+
+      .calc-result {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--accent-alt);
+      }
+
+      .info-list {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .info-list li {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 0.95rem;
+      }
+
+      .info-list svg {
+        color: var(--accent);
+      }
+
+      .compare-table td,
+      .compare-table th {
+        text-align: center;
+      }
+
+      .location-card {
+        border-left: 4px solid var(--accent);
+        padding-left: 20px;
+      }
+
+      .footer {
+        padding: 30px 0 60px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #ffffff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 18px 35px rgba(37, 211, 102, 0.4);
+        z-index: 100;
+        transition: var(--transition);
+      }
+
+      .whatsapp-float:hover,
+      .whatsapp-float:focus-visible {
+        transform: translateY(-3px);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 860px) {
+        .nav-links {
+          display: none;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          padding: 70px 0 60px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="top-bar">
+      <div class="container nav">
+        <div class="brand">
+          <img src="Logo.jpg" alt="Logo de SIAJSA LTDA" />
+          <div>
+            <div class="brand-title">SIAJSA LTDA</div>
+            <div class="brand-subtitle">Hormigon premezclado certificado</div>
           </div>
-          <div class="hero-metric">
-            <div class="val">5×</div>
-            <div class="lbl">Más rápido que<br/>mezcla en obra</div>
-          </div>
-          <div class="hero-metric">
-            <div class="val g">20.78<span style="font-size:1.3rem">%</span></div>
-            <div class="lbl">Desgaste Ángeles<br/>árido Parotani</div>
-          </div>
-          <div class="hero-metric">
-            <div class="val">2</div>
-            <div class="lbl">Sedes operativas<br/>Cbba · SCZ</div>
-          </div>
         </div>
-        <div class="hero-card-note">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Cumplimiento ASTM C33 · Respaldo técnico UMSS
-        </div>
+        <nav class="nav-links" aria-label="Navegacion principal">
+          <a href="#catalogo">Catalogo tecnico</a>
+          <a href="#calculadora">Calculadora</a>
+          <a href="#aridos">Aridos propios</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#sedes">Sedes</a>
+        </nav>
+        <a class="cta-primary" href="#sedes">Contactar ahora</a>
       </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<!-- STRIP -->
-<div class="strip">
-  <div class="strip-track" id="stripTrack">
-    <div class="strip-inner" id="stripA">
-      <div class="strip-item"><div class="strip-dot"></div>Áridos propios · Parotani, Sipe Sipe</div>
-      <div class="strip-item"><div class="strip-dot"></div>Dosificación computarizada</div>
-      <div class="strip-item"><div class="strip-dot"></div>Slump 6 – 20 cm</div>
-      <div class="strip-item"><div class="strip-dot"></div>Densidad 2300 – 2400 kg/m³</div>
-      <div class="strip-item"><div class="strip-dot"></div>Fraguado inicial ≥ 3 horas</div>
-      <div class="strip-item"><div class="strip-dot"></div>NIT 1021705021</div>
-      <div class="strip-item"><div class="strip-dot"></div>Norma ASTM C33</div>
-      <div class="strip-item"><div class="strip-dot"></div>Respaldo UMSS</div>
-    </div>
-    <div class="strip-inner" id="stripB" aria-hidden="true">
-      <div class="strip-item"><div class="strip-dot"></div>Áridos propios · Parotani, Sipe Sipe</div>
-      <div class="strip-item"><div class="strip-dot"></div>Dosificación computarizada</div>
-      <div class="strip-item"><div class="strip-dot"></div>Slump 6 – 20 cm</div>
-      <div class="strip-item"><div class="strip-dot"></div>Densidad 2300 – 2400 kg/m³</div>
-      <div class="strip-item"><div class="strip-dot"></div>Fraguado inicial ≥ 3 horas</div>
-      <div class="strip-item"><div class="strip-dot"></div>NIT 1021705021</div>
-      <div class="strip-item"><div class="strip-dot"></div>Norma ASTM C33</div>
-      <div class="strip-item"><div class="strip-dot"></div>Respaldo UMSS</div>
-    </div>
-  </div>
-</div>
-
-<!-- CATÁLOGO -->
-<section class="section catalog-section" id="productos">
-  <div class="container">
-    <div class="catalog-header">
-      <div>
-        <div class="section-tag">Catálogo técnico</div>
-        <div class="section-title">H-15 a H-35</div>
-        <p class="section-sub">Resistencia característica a compresión a los 28 días. Seleccioná el tipo según tu elemento estructural.</p>
-      </div>
-      <a class="btn-primary" href="https://wa.me/59172423158?text=Hola%20SIAJSA%2C%20quiero%20cotizar%20hormigón%20premezclado." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-    </div>
-    <div class="hormigon-grid reveal">
-      <div class="hormigon-row header-row">
-        <div class="hc">Tipo</div>
-        <div class="hc">Resistencia</div>
-        <div class="hc">Aplicaciones típicas</div>
-        <div class="hc hide-mobile">Categoría</div>
-      </div>
-      <div class="hormigon-row">
-        <div class="hc"><span class="h-code">H-15</span></div>
-        <div class="hc"><span class="h-res">150 kg/cm²</span></div>
-        <div class="hc"><span class="h-app">Bordillos, aceras, rellenos, carpetas de nivelación y contrapisos.</span></div>
-        <div class="hc hide-mobile"><span class="h-tag">Básico</span></div>
-      </div>
-      <div class="hormigon-row">
-        <div class="hc"><span class="h-code">H-18</span></div>
-        <div class="hc"><span class="h-res">180 kg/cm²</span></div>
-        <div class="hc"><span class="h-app">Losas de viviendas planta baja, muros de cerramiento no estructurales.</span></div>
-        <div class="hc hide-mobile"><span class="h-tag">Básico</span></div>
-      </div>
-      <div class="hormigon-row">
-        <div class="hc"><span class="h-code">H-21</span></div>
-        <div class="hc"><span class="h-res">210 kg/cm²</span></div>
-        <div class="hc"><span class="h-app">Vigas, columnas y losas en estructuras estándar de viviendas unifamiliares.</span></div>
-        <div class="hc hide-mobile"><span class="h-tag">Popular</span></div>
-      </div>
-      <div class="hormigon-row">
-        <div class="hc"><span class="h-code">H-25</span></div>
-        <div class="hc"><span class="h-res">250 kg/cm²</span></div>
-        <div class="hc"><span class="h-app">Edificaciones de varios niveles, pavimentos de tráfico moderado y estacionamientos.</span></div>
-        <div class="hc hide-mobile"><span class="h-tag">Popular</span></div>
-      </div>
-      <div class="hormigon-row">
-        <div class="hc"><span class="h-code">H-28</span></div>
-        <div class="hc"><span class="h-res">280 kg/cm²</span></div>
-        <div class="hc"><span class="h-app">Estructuras industriales, losas de fundación de gran espesor y plantas de proceso.</span></div>
-        <div class="hc hide-mobile"><span class="h-tag">Industrial</span></div>
-      </div>
-      <div class="hormigon-row">
-        <div class="hc"><span class="h-code">H-30</span></div>
-        <div class="hc"><span class="h-res">300 kg/cm²</span></div>
-        <div class="hc"><span class="h-app">Puentes, estructuras con grandes luces, pavimentos de tráfico pesado continuo.</span></div>
-        <div class="hc hide-mobile"><span class="h-tag special">Alta resistencia</span></div>
-      </div>
-      <div class="hormigon-row">
-        <div class="hc"><span class="h-code">H-35</span></div>
-        <div class="hc"><span class="h-res">350 kg/cm²</span></div>
-        <div class="hc"><span class="h-app">Ingeniería especial, elementos pretensados, infraestructura crítica y obras de gran envergadura.</span></div>
-        <div class="hc hide-mobile"><span class="h-tag special">Premium</span></div>
-      </div>
-    </div>
-    <p style="font-size:11px;color:var(--c-text3);margin-top:12px;font-family:'DM Mono',monospace">* Slump configurable 6–20 cm según método de colocación. Consultar mezclas especiales para bombeo.</p>
-  </div>
-</section>
-
-<!-- CALCULADORA -->
-<section class="section calc-section" id="calculadora">
-  <div class="container">
-    <div class="section-tag">Herramienta de obra</div>
-    <div class="section-title">Calculadora de volumen</div>
-    <p class="section-sub" style="margin-bottom:44px">Ingresá las dimensiones de tu losa, viga o fundación y te decimos cuántos m³ necesitás pedir.</p>
-    <div class="calc-wrap reveal">
-      <div class="calc-form">
-        <label class="calc-label" for="largo">Largo de la estructura</label>
-        <div class="calc-input-wrap">
-          <input class="calc-input" type="number" id="largo" placeholder="0.00" step="0.01" min="0"/>
-          <div class="calc-unit">metros</div>
-        </div>
-        <label class="calc-label" for="ancho">Ancho de la estructura</label>
-        <div class="calc-input-wrap">
-          <input class="calc-input" type="number" id="ancho" placeholder="0.00" step="0.01" min="0"/>
-          <div class="calc-unit">metros</div>
-        </div>
-        <label class="calc-label" for="espesor">Espesor / Altura</label>
-        <div class="calc-input-wrap">
-          <input class="calc-input" type="number" id="espesor" placeholder="0.20" step="0.01" min="0"/>
-          <div class="calc-unit">metros</div>
-        </div>
-        <div class="calc-divider">tipo de hormigón</div>
-        <label class="calc-label" for="tipo-h">Resistencia requerida</label>
-        <div class="calc-input-wrap" style="margin-bottom:0">
-          <select class="calc-input" id="tipo-h">
-            <option value="H-15">H-15 · 150 kg/cm² — Bordillos y aceras</option>
-            <option value="H-18">H-18 · 180 kg/cm² — Vivienda planta baja</option>
-            <option value="H-21" selected>H-21 · 210 kg/cm² — Estructura estándar</option>
-            <option value="H-25">H-25 · 250 kg/cm² — Edificios y pavimentos</option>
-            <option value="H-28">H-28 · 280 kg/cm² — Industrial y fundaciones</option>
-            <option value="H-30">H-30 · 300 kg/cm² — Puentes y grandes luces</option>
-            <option value="H-35">H-35 · 350 kg/cm² — Ingeniería especial</option>
-          </select>
-        </div>
-      </div>
-      <div class="calc-result">
-        <div class="result-label">Volumen estimado</div>
-        <div class="result-number" id="result-m3">0.00</div>
-        <div class="result-unit">m³ de hormigón</div>
-        <div class="result-note" id="result-note">Ingresá las dimensiones para calcular el volumen. Se aplica un 5% de margen operativo estándar.</div>
-        <a class="wa-btn" id="wa-calc-btn" href="https://wa.me/59172423158" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0 0 12.01 0C5.4 0 .02 5.39 0 11.98A11.9 11.9 0 0 0 1.76 18l-1.16 6 6.12-1.6A11.95 11.95 0 0 0 12 24h.01c6.61 0 11.99-5.39 11.99-11.99 0-3.2-1.25-6.2-3.48-8.53Z"/></svg>
-          Pedir esta cantidad por WhatsApp
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PAROTANI -->
-<section class="section parotani-section" id="calidad">
-  <div class="container">
-    <div class="parotani-inner">
-      <div class="reveal">
-        <div class="section-tag">Áridos propios</div>
-        <div class="section-title">PAROTANI,<br/>SIPE SIPE</div>
-        <p style="color:var(--c-text2);font-size:.94rem;line-height:1.75;margin-top:14px">Extraemos y procesamos nuestros propios áridos en Parotani, uno de los bancos de agregados de mejor calidad mineralógica del valle cochabambino. Lavado y tamizado industrial para eliminar finos indeseables.</p>
-        <div class="parotani-ensayos">
-          <div class="ensayo-item">
-            <div class="ensayo-val">20.78%</div>
-            <div class="ensayo-lbl">Desgaste de los Ángeles<br/>(grava)</div>
-          </div>
-          <div class="ensayo-item">
-            <div class="ensayo-val">2.59</div>
-            <div class="ensayo-lbl">Gravedad específica<br/>de la grava</div>
-          </div>
-          <div class="ensayo-item">
-            <div class="ensayo-val">2.80%</div>
-            <div class="ensayo-lbl">Absorción<br/>de la grava</div>
-          </div>
-          <div class="ensayo-item">
-            <div class="ensayo-val">2.72</div>
-            <div class="ensayo-lbl">Gravedad específica<br/>de la arena</div>
-          </div>
-        </div>
-        <p style="margin-top:12px;font-size:11px;color:var(--c-text3);font-family:'DM Mono',monospace">Ensayos con colaboración técnica UMSS · Norma ASTM C33</p>
-      </div>
-      <div class="reveal">
-        <div class="section-tag">Dosificación científica</div>
-        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.75rem;letter-spacing:2px;color:var(--c-text);margin-top:8px;margin-bottom:4px">Método Fuller</h3>
-        <p style="color:var(--c-text2);font-size:.9rem;line-height:1.75">Distribución granulométrica optimizada: ~51% arena · ~49% grava para máxima impermeabilidad con mínimo uso de cemento.</p>
-        <div class="proceso-list">
-          <div class="proceso-item">
-            <div class="proceso-num">01</div>
-            <div class="proceso-text">
-              <h4>Extracción en lecho de río</h4>
-              <p>Material pétreo de lechos naturales de Parotani con mínima contaminación orgánica.</p>
+    <main id="contenido">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <span class="badge">Laboratorio propio UMSS</span>
+            <h1>Hormigon premezclado de calidad certificada</h1>
+            <p>
+              Hormigon H-15 a H-35 con dosificacion computarizada, control tecnico permanente y aridos propios
+              extraidos en Parotani. Respuesta inmediata en Cochabamba y Santa Cruz.
+            </p>
+            <div class="hero-actions">
+              <a class="cta-primary" href="https://wa.me/59172423158" target="_blank" rel="noopener">
+                WhatsApp Cochabamba
+              </a>
+              <a class="cta-secondary" href="https://wa.me/59171691534" target="_blank" rel="noopener">
+                WhatsApp Santa Cruz
+              </a>
             </div>
           </div>
-          <div class="proceso-item">
-            <div class="proceso-num">02</div>
-            <div class="proceso-text">
-              <h4>Lavado y tamizado industrial</h4>
-              <p>Eliminación de limos y arcillas que debilitan la unión cemento–árido. Control granulométrico por zarandas.</p>
+          <div class="hero-panel reveal">
+            <h3>Control industrial total</h3>
+            <div class="stat">
+              Resistencia garantizada <span>H-15 a H-35</span>
             </div>
-          </div>
-          <div class="proceso-item">
-            <div class="proceso-num">03</div>
-            <div class="proceso-text">
-              <h4>Dosificación computarizada</h4>
-              <p>Relación agua–cemento precisa. Cada carga tiene el respaldo de una dosificación controlada digitalmente.</p>
+            <div class="stat">
+              Aridos certificados <span>Parotani</span>
             </div>
-          </div>
-          <div class="proceso-item">
-            <div class="proceso-num">04</div>
-            <div class="proceso-text">
-              <h4>Control de resistencia en obra</h4>
-              <p>Ensayos de compresión a 7 y 28 días. Laboratorio propio disponible para validar resultados.</p>
+            <div class="stat">
+              Dosificacion <span>Computarizada</span>
+            </div>
+            <div class="stat">
+              Servicio de bombeo <span>Disponible</span>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
-<!-- SERVICIOS -->
-<section class="section servicios-section" id="servicios">
-  <div class="container">
-    <div class="section-tag">Lo que ofrecemos</div>
-    <div class="section-title">Servicios completos</div>
-    <p class="section-sub">No solo entregamos el material. Resolvemos el problema logístico completo de tu obra.</p>
-    <div class="servicios-grid reveal">
-      <div class="servicio-card">
-        <div class="servicio-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-        </div>
-        <h3>Hormigón premezclado</h3>
-        <p>Producción en planta con dosificación computarizada. Entrega en mixer con el volumen exacto solicitado.</p>
-      </div>
-      <div class="servicio-card">
-        <div class="servicio-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-        </div>
-        <h3>Bombeo de hormigón</h3>
-        <p>Mezclas diseñadas para bombearse sin segregación. Alcance en altura para edificios y áreas de difícil acceso.</p>
-      </div>
-      <div class="servicio-card">
-        <div class="servicio-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
-        </div>
-        <h3>Áridos clasificados</h3>
-        <p>Grava y arena de Parotani lavada y tamizada. Disponible como material independiente para constructoras.</p>
-      </div>
-      <div class="servicio-card">
-        <div class="servicio-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        </div>
-        <h3>Diseño de mezclas</h3>
-        <p>Formulación a pedido para proyectos con requisitos especiales. Respaldo técnico de la UMSS.</p>
-      </div>
-      <div class="servicio-card">
-        <div class="servicio-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Ensayos de laboratorio</h3>
-        <p>Control de resistencia a compresión a 7 y 28 días. Validación de resultados en obra para garantía estructural.</p>
-      </div>
-      <div class="servicio-card">
-        <div class="servicio-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.4a16 16 0 0 0 6.29 6.29l1.46-1.46a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <h3>Asesoramiento técnico</h3>
-        <p>Te ayudamos a definir el tipo de hormigón correcto según el elemento estructural. Coordinación directa con el ingeniero de obra.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VENTAJAS -->
-<section class="section ventajas-section">
-  <div class="container">
-    <div class="section-tag">Comparativa</div>
-    <div class="section-title">Premezclado vs.<br/>mezcla en obra</div>
-    <p class="section-sub">Cada metro cúbico de SIAJSA reemplaza horas de trabajo manual, desperdicio de material y variación de calidad.</p>
-    <div class="ventajas-table-wrap reveal">
-      <table class="vtable">
-        <thead>
-          <tr>
-            <th>Criterio</th>
-            <th style="background:var(--c-green-dim);color:var(--c-green-bright)">SIAJSA Premezclado</th>
-            <th>Mezcla en obra</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Velocidad de vaciado</td>
-            <td style="background:var(--c-green-dim)"><span style="color:var(--c-green-bright);font-weight:700;font-family:'DM Mono',monospace">5× más rápido</span></td>
-            <td><span class="cross">✕</span> Lento</td>
-          </tr>
-          <tr>
-            <td>Control de dosificación</td>
-            <td style="background:var(--c-green-dim)"><span style="color:var(--c-green-bright);font-weight:700;font-family:'DM Mono',monospace">Computarizado</span></td>
-            <td><span class="cross">✕</span> Manual</td>
-          </tr>
-          <tr>
-            <td>Desperdicio de material</td>
-            <td style="background:var(--c-green-dim)"><span class="check">✓</span> Volumen exacto</td>
-            <td><span class="cross">✕</span> Alto desperdicio</td>
-          </tr>
-          <tr>
-            <td>Mano de obra en obra</td>
-            <td style="background:var(--c-green-dim)"><span class="check">✓</span> Mínima</td>
-            <td><span class="cross">✕</span> Elevada</td>
-          </tr>
-          <tr>
-            <td>Certificación de resistencia</td>
-            <td style="background:var(--c-green-dim)"><span class="check">✓</span> Por carga</td>
-            <td><span class="cross">✕</span> Sin garantía</td>
-          </tr>
-          <tr>
-            <td>Limpieza en obra</td>
-            <td style="background:var(--c-green-dim)"><span class="check">✓</span> Sin acopio en calle</td>
-            <td><span class="cross">✕</span> Arena y grava en calle</td>
-          </tr>
-          <tr>
-            <td>Cumplimiento ASTM C33</td>
-            <td style="background:var(--c-green-dim)"><span class="check">✓</span> Certificado</td>
-            <td><span class="cross">✕</span> No aplica</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- SEDES -->
-<section class="sedes-section" id="sedes">
-  <div class="container">
-    <div class="section-tag">Cobertura nacional</div>
-    <div class="section-title">Dos sedes operativas</div>
-    <p class="section-sub">Plantas en los dos mercados de mayor crecimiento constructivo de Bolivia.</p>
-    <div class="sedes-grid reveal">
-      <div class="sede-card">
-        <div class="sede-city">Cochabamba</div>
-        <div class="sede-address">
-          Av. Blanco Galindo Km 11<br/>
-          <span style="font-size:12px;color:var(--c-text3)">Conexión directa con Quillacollo · Vinto · Parotani</span>
-        </div>
-        <div class="sede-contacts">
-          <div class="sede-contact-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.4a16 16 0 0 0 6.29 6.29l1.46-1.46a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>72423158</span>
-          </div>
-          <div class="sede-contact-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span>informaciones@trabajando.com.bo</span>
+      <section class="section" id="catalogo">
+        <div class="container reveal">
+          <h2 class="section-title">Catalogo tecnico H-15 a H-35</h2>
+          <p class="section-subtitle">
+            Resistencias en kg/cm² con aplicaciones tipicas. Selecciona tu mezcla segun la exigencia de obra.
+          </p>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Resistencia (kg/cm²)</th>
+                  <th>Aplicaciones tipicas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>H-15</td>
+                  <td>150</td>
+                  <td>Veredas, contrapisos, rellenos no estructurales</td>
+                </tr>
+                <tr>
+                  <td>H-18</td>
+                  <td>180</td>
+                  <td>Vivienda liviana, aceras reforzadas, soleras</td>
+                </tr>
+                <tr>
+                  <td>H-21</td>
+                  <td>210</td>
+                  <td>Losas, columnas livianas, estructuras habitacionales</td>
+                </tr>
+                <tr>
+                  <td>H-25</td>
+                  <td>250</td>
+                  <td>Vigas, columnas, losas estructurales</td>
+                </tr>
+                <tr>
+                  <td>H-28</td>
+                  <td>280</td>
+                  <td>Infraestructura vial, pavimentos industriales</td>
+                </tr>
+                <tr>
+                  <td>H-30</td>
+                  <td>300</td>
+                  <td>Edificios de media altura, placas postensadas</td>
+                </tr>
+                <tr>
+                  <td>H-35</td>
+                  <td>350</td>
+                  <td>Alta resistencia, puentes, estructuras de carga</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        <a class="sede-wa" href="https://wa.me/59172423158?text=Hola%20SIAJSA%20Cochabamba%2C%20quiero%20cotizar%20hormigón%20premezclado." target="_blank" rel="noopener">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0 0 12.01 0C5.4 0 .02 5.39 0 11.98A11.9 11.9 0 0 0 1.76 18l-1.16 6 6.12-1.6A11.95 11.95 0 0 0 12 24h.01c6.61 0 11.99-5.39 11.99-11.99 0-3.2-1.25-6.2-3.48-8.53Z"/></svg>
-          Contactar Cochabamba
-        </a>
-      </div>
-      <div class="sede-card">
-        <div class="sede-city">Santa Cruz</div>
-        <div class="sede-address">
-          Av. Banzer 8vo Anillo, Av. Cataluña<br/>
-          <span style="font-size:12px;color:var(--c-text3)">Epicentro del crecimiento inmobiliario corporativo de SCZ</span>
-        </div>
-        <div class="sede-contacts">
-          <div class="sede-contact-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.4a16 16 0 0 0 6.29 6.29l1.46-1.46a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>+591 71691534</span>
+      </section>
+
+      <section class="section" id="calculadora">
+        <div class="container grid-2">
+          <div class="card reveal">
+            <h2 class="section-title">Calculadora de volumen</h2>
+            <p class="section-subtitle">
+              Calcula tu requerimiento en m³. Ingresa largo, ancho y espesor en metros.
+            </p>
+            <div class="calculator">
+              <div class="input-group">
+                <label for="largo">Largo (m)</label>
+                <input id="largo" type="number" min="0" step="0.01" placeholder="Ej. 12.5" />
+              </div>
+              <div class="input-group">
+                <label for="ancho">Ancho (m)</label>
+                <input id="ancho" type="number" min="0" step="0.01" placeholder="Ej. 8" />
+              </div>
+              <div class="input-group">
+                <label for="espesor">Espesor (m)</label>
+                <input id="espesor" type="number" min="0" step="0.01" placeholder="Ej. 0.18" />
+              </div>
+              <div>
+                <div class="calc-result" id="resultado">0.00 m³</div>
+                <p class="section-subtitle" style="margin-top: 4px;">Resultado estimado.</p>
+              </div>
+              <a class="cta-primary" id="cta-calculadora" href="https://wa.me/59172423158" target="_blank" rel="noopener">
+                Solicitar esta cantidad por WhatsApp
+              </a>
+            </div>
           </div>
-          <div class="sede-contact-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span>ecardozo@siajsa.com.bo</span>
+          <div class="card reveal">
+            <h3 style="margin-top: 0;">Control de calidad in situ</h3>
+            <p>
+              Nuestro laboratorio propio con respaldo de la UMSS verifica cada lote con ensayos de resistencia,
+              asentamiento y granulometria para garantizar consistencia en obra.
+            </p>
+            <ul class="info-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Reportes tecnicos por proyecto
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Trazabilidad completa de materiales
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Dosificacion computarizada en planta
+              </li>
+            </ul>
           </div>
         </div>
-        <a class="sede-wa" href="https://wa.me/59171691534?text=Hola%20SIAJSA%20Santa%20Cruz%2C%20quiero%20cotizar%20hormigón%20premezclado." target="_blank" rel="noopener">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0 0 12.01 0C5.4 0 .02 5.39 0 11.98A11.9 11.9 0 0 0 1.76 18l-1.16 6 6.12-1.6A11.95 11.95 0 0 0 12 24h.01c6.61 0 11.99-5.39 11.99-11.99 0-3.2-1.25-6.2-3.48-8.53Z"/></svg>
-          Contactar Santa Cruz
-        </a>
+      </section>
+
+      <section class="section" id="aridos">
+        <div class="container grid-2">
+          <div class="card reveal">
+            <span class="badge">Parotani · Sipe Sipe</span>
+            <h2 class="section-title">Aridos propios certificados</h2>
+            <p>
+              Extraemos y controlamos nuestros aridos en Parotani para asegurar granulometria consistente y
+              resistencia superior. Esta ventaja competitiva reduce costos y tiempos en obra.
+            </p>
+            <div class="grid-2">
+              <div>
+                <p style="margin: 0; color: var(--muted);">Desgaste de los Angeles</p>
+                <div class="calc-result">20.78%</div>
+              </div>
+              <div>
+                <p style="margin: 0; color: var(--muted);">Gravedad especifica</p>
+                <div class="calc-result">2.59</div>
+              </div>
+            </div>
+          </div>
+          <div class="card reveal">
+            <h3 style="margin-top: 0;">Ventaja competitiva real</h3>
+            <p>
+              Controlamos toda la cadena: extraccion, transporte y dosificacion. Esto se traduce en mayor
+              estabilidad de mezcla, menor variacion de resistencia y entregas mas rapidas.
+            </p>
+            <ul class="info-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Abastecimiento garantizado
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Control de calidad continuo
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Costos competitivos en grandes volumnes
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="servicios">
+        <div class="container reveal">
+          <h2 class="section-title">Servicios industriales</h2>
+          <p class="section-subtitle">Soluciones integrales para obra con respaldo tecnico y logistica propia.</p>
+          <div class="grid-3">
+            <article class="card">
+              <h3>Bombeo de hormigon</h3>
+              <p>Equipos de bombeo disponibles para vaciados rapidos, zonas de dificil acceso y grandes volumenes.</p>
+            </article>
+            <article class="card">
+              <h3>Soporte tecnico</h3>
+              <p>Ingenieros y laboratoristas acompañan el proceso para garantizar resistencia y asentamiento.</p>
+            </article>
+            <article class="card">
+              <h3>Diseño de mezclas</h3>
+              <p>Formulaciones a pedido segun requerimientos estructurales o condiciones especiales de obra.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="comparativo">
+        <div class="container reveal">
+          <h2 class="section-title">Ventajas vs mezcla en obra</h2>
+          <p class="section-subtitle">Comparativo directo en productividad y control tecnico.</p>
+          <div class="table-scroll">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Indicador</th>
+                  <th>Hormigon SIAJSA</th>
+                  <th>Mezcla en obra</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Velocidad de vaciado</td>
+                  <td>5x mas rapido</td>
+                  <td>Lenta y manual</td>
+                </tr>
+                <tr>
+                  <td>Ahorro mano de obra</td>
+                  <td>Reduce cuadrillas</td>
+                  <td>Alto personal requerido</td>
+                </tr>
+                <tr>
+                  <td>Desperdicio</td>
+                  <td>Cero desperdicio</td>
+                  <td>Perdidas frecuentes</td>
+                </tr>
+                <tr>
+                  <td>Calidad</td>
+                  <td>Certificada por laboratorio</td>
+                  <td>Variable e incierta</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sedes">
+        <div class="container reveal">
+          <h2 class="section-title">Dos sedes estrategicas</h2>
+          <p class="section-subtitle">Cobertura directa en Cochabamba y Santa Cruz.</p>
+          <div class="grid-2">
+            <div class="card location-card">
+              <h3>Cochabamba</h3>
+              <p>Av. Blanco Galindo Km 11</p>
+              <p>WhatsApp: <strong>72423158</strong></p>
+              <a class="cta-secondary" href="https://wa.me/59172423158" target="_blank" rel="noopener">
+                Contactar Cochabamba
+              </a>
+            </div>
+            <div class="card location-card">
+              <h3>Santa Cruz</h3>
+              <p>Av. Banzer 8vo anillo</p>
+              <p>WhatsApp: <strong>+591 71691534</strong></p>
+              <a class="cta-secondary" href="https://wa.me/59171691534" target="_blank" rel="noopener">
+                Contactar Santa Cruz
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+        <div>SIAJSA LTDA · Hormigon premezclado de alta resistencia.</div>
+        <div>© 2026 DeskBotBo. Todos los derechos reservados.</div>
       </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<!-- CTA BAND -->
-<div class="cta-band">
-  <div class="container">
-    <div class="cta-band-inner">
-      <div>
-        <h2>LISTOS PARA<br/>TU PRÓXIMO<br/>VACIADO</h2>
-        <p>Coordiná una visita técnica y recibí tu propuesta en menos de 24 horas.</p>
-      </div>
-      <div class="cta-band-actions">
-        <a class="btn-white" href="https://wa.me/59172423158?text=Hola%20SIAJSA%2C%20quiero%20coordinar%20un%20vaciado." target="_blank" rel="noopener">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0 0 12.01 0C5.4 0 .02 5.39 0 11.98A11.9 11.9 0 0 0 1.76 18l-1.16 6 6.12-1.6A11.95 11.95 0 0 0 12 24h.01c6.61 0 11.99-5.39 11.99-11.99 0-3.2-1.25-6.2-3.48-8.53Z"/></svg>
-          Hablar por WhatsApp
-        </a>
-        <a class="btn-outline-white" href="#calculadora">Calcular mi volumen</a>
-      </div>
-    </div>
-  </div>
-</div>
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/59172423158"
+      target="_blank"
+      rel="noopener"
+      aria-label="Contactar por WhatsApp">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M20.52 3.48A11.91 11.91 0 0 0 12.01 0C5.4 0 .02 5.39 0 11.98A11.9 11.9 0 0 0 1.76 18l-1.16 6 6.12-1.6A11.95 11.95 0 0 0 12 24h.01c6.61 0 11.99-5.39 11.99-11.99 0-3.2-1.25-6.2-3.48-8.53ZM12 22.03a9.98 9.98 0 0 1-5.1-1.4l-.37-.22-3.63.95.97-3.54-.24-.38a9.96 9.96 0 1 1 8.37 4.59Zm5.53-7.48c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.46-.88-.78-1.48-1.74-1.65-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.64-.94-2.24-.25-.6-.5-.52-.68-.53h-.58c-.2 0-.53.07-.8.38-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.7.61.71.23 1.36.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.08-.13-.28-.2-.58-.35Z" />
+      </svg>
+    </a>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div style="display:flex;align-items:center;gap:14px">
-        <img src="Logo.jpg" alt="SIAJSA" style="height:22px;width:auto;filter:brightness(0) invert(1);opacity:.32"/>
-        <span class="footer-legal">NIT 1021705021 · Cochabamba y Santa Cruz · Bolivia</span>
-      </div>
-      <div class="footer-norm">ASTM C33 · © 2026 DeskBotBo. Todos los derechos reservados.</div>
-    </div>
-  </div>
-</footer>
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
 
-<!-- WHATSAPP FLOAT -->
-<a class="wa-float" href="https://wa.me/59172423158?text=Hola%20SIAJSA%2C%20quiero%20cotizar%20hormigón%20premezclado." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M20.52 3.48A11.91 11.91 0 0 0 12.01 0C5.4 0 .02 5.39 0 11.98A11.9 11.9 0 0 0 1.76 18l-1.16 6 6.12-1.6A11.95 11.95 0 0 0 12 24h.01c6.61 0 11.99-5.39 11.99-11.99 0-3.2-1.25-6.2-3.48-8.53Z"/></svg>
-</a>
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
-<script>
-// CALCULADORA
-function calcular() {
-  var l = parseFloat(document.getElementById('largo').value) || 0;
-  var a = parseFloat(document.getElementById('ancho').value) || 0;
-  var e = parseFloat(document.getElementById('espesor').value) || 0;
-  var tipo = document.getElementById('tipo-h').value;
-  var base = l * a * e;
-  var total = base * 1.05;
-  document.getElementById('result-m3').textContent = total.toFixed(2);
-  var noteEl = document.getElementById('result-note');
-  var btnEl = document.getElementById('wa-calc-btn');
-  if (base > 0) {
-    noteEl.textContent = 'Volumen neto: ' + base.toFixed(2) + ' m³ + 5% margen = ' + total.toFixed(2) + ' m³ de ' + tipo + '. Precio a consultar según disponibilidad de planta.';
-    var msg = encodeURIComponent('Hola SIAJSA, quiero cotizar ' + total.toFixed(2) + ' m³ de hormigón ' + tipo + ' (estructura ' + l + 'm × ' + a + 'm × ' + e + 'm). ¿Disponibilidad y precio?');
-    btnEl.href = 'https://wa.me/59172423158?text=' + msg;
-  } else {
-    noteEl.textContent = 'Ingresá las dimensiones para calcular el volumen. Se aplica un 5% de margen operativo estándar.';
-    btnEl.href = 'https://wa.me/59172423158';
-  }
-}
-['largo','ancho','espesor'].forEach(function(id){
-  document.getElementById(id).addEventListener('input', calcular);
-});
-document.getElementById('tipo-h').addEventListener('change', calcular);
+      const largoInput = document.getElementById("largo");
+      const anchoInput = document.getElementById("ancho");
+      const espesorInput = document.getElementById("espesor");
+      const resultado = document.getElementById("resultado");
+      const ctaCalculadora = document.getElementById("cta-calculadora");
 
-// SCROLL REVEAL
-var obs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
-}, {threshold:0.1});
-document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+      const formatVolume = (value) => {
+        if (Number.isNaN(value) || value <= 0) {
+          return "0.00 m³";
+        }
+        return `${value.toFixed(2)} m³`;
+      };
 
-// STRIP TICKER
-(function(){
-  var track = document.getElementById('stripTrack');
-  var a = document.getElementById('stripA');
-  if(!track || !a) return;
-  var pos = 0;
-  function tick(){
-    pos -= 0.55;
-    if(Math.abs(pos) >= a.offsetWidth) pos = 0;
-    track.style.transform = 'translateX(' + pos + 'px)';
-    requestAnimationFrame(tick);
-  }
-  tick();
-})();
-</script>
-</body>
+      const updateVolume = () => {
+        const largo = parseFloat(largoInput.value) || 0;
+        const ancho = parseFloat(anchoInput.value) || 0;
+        const espesor = parseFloat(espesorInput.value) || 0;
+        const volumen = largo * ancho * espesor;
+        resultado.textContent = formatVolume(volumen);
+
+        const mensaje = encodeURIComponent(
+          `Hola SIAJSA, necesito ${formatVolume(volumen)} de hormigon premezclado.`
+        );
+        ctaCalculadora.href = `https://wa.me/59172423158?text=${mensaje}`;
+      };
+
+      [largoInput, anchoInput, espesorInput].forEach((input) => {
+        input.addEventListener("input", updateVolume);
+      });
+    </script>
+  </body>
 </html>
